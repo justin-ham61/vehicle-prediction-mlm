@@ -15,7 +15,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 sns.set_theme()
 
-train = pd.read_csv("C:/Users/jiheo/OneDrive/Documents/School/WGU/Capstone/vehicle-prediction-mlm/data/train.csv")
+train = pd.read_csv("vehicle-prediction-mlm/data/train.csv")
 
 ##Retrieves all column names in lower case from the data
 train.columns  = [col.lower() for col in train.columns]
