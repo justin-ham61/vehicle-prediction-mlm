@@ -60,13 +60,36 @@ def predict_price(input_data):
     
     return predicted_price[0]
 
-user_input = {
-    'make': 'Mercedes-Benz', 'model': 'C-Class C 300', 'year': 2022, 'mileage': 50000, 'engine': '2.0L I4 16V GDI DOHC Turbo',
+user_input1 = {
+    'make': 'Mercedes-Benz', 'model': 'C-Class C 300', 'year': 2021, 'mileage': 100000, 'engine': '2.0L I4 16V GDI DOHC Turbo',
     'transmission': '9-Speed Automatic', 'drivetrain': 'Rear-wheel Drive', 'min_mpg': 25, 'max_mpg': 35, 'damaged': 0,
     'first_owner': 1, 'personal': 1, 'turbo': 0, 'cruise': 1, 'nav': 1, 'power_lift': 0, 'back_cam': 1,
     'keyless': 1, 'remote': 1, 'sunroof': 0, 'leather_seats': 1, 'memory_seats': 0, 'smart_info': 1,
     'bluetooth': 1, 'usb': 1, 'heated_seats': 1
 }
 
-predicted_price = predict_price(user_input)
-print(f'Predicted Price: ${predicted_price:.2f}')
+user_input2 = {
+    'make': 'Mercedes-Benz', 'model': 'C-Class C 300', 'year': 2021, 'mileage': 100000, 'engine': '2.0L I4 16V GDI DOHC Turbo',
+    'transmission': '9-Speed Automatic', 'drivetrain': 'Rear-wheel Drive', 'min_mpg': 25, 'max_mpg': 35, 'damaged': 0,
+    'first_owner': 1, 'personal': 1, 'turbo': 0, 'cruise': 1, 'nav': 1, 'power_lift': 0, 'back_cam': 1,
+    'keyless': 1, 'remote': 1, 'sunroof': 0, 'leather_seats': 1, 'memory_seats': 0, 'smart_info': 1,
+    'bluetooth': 1, 'usb': 1, 'heated_seats': 1
+}
+
+user_input3 = {
+    'make': 'Mercedes-Benz', 'model': 'C-Class C 300', 'year': 2018, 'mileage': 100000, 'engine': '2.0L I4 16V GDI DOHC Turbo',
+    'transmission': '9-Speed Automatic', 'drivetrain': 'Rear-wheel Drive', 'min_mpg': 25, 'max_mpg': 35, 'damaged': 0,
+    'first_owner': 1, 'personal': 1, 'turbo': 0, 'cruise': 1, 'nav': 1, 'power_lift': 0, 'back_cam': 1,
+    'keyless': 1, 'remote': 1, 'sunroof': 0, 'leather_seats': 1, 'memory_seats': 0, 'smart_info': 1,
+    'bluetooth': 1, 'usb': 1, 'heated_seats': 1
+}
+
+predicted_price1 = predict_price(user_input1)
+print(f'Predicted Price Low Mile: ${predicted_price1:.2f}')
+predicted_price2 = predict_price(user_input2)
+print(f'Predicted Price: ${predicted_price2:.2f}')
+predicted_price3 = predict_price(user_input3)
+print(f'Predicted Price High Mile: ${predicted_price3:.2f}')
+
+
+
