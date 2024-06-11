@@ -63,7 +63,7 @@ plt.title("Scatter plot between Mileage and Price")
 plt.savefig('price_vs_mileage.png')
 plt.show()
 
-""" ##Split train and validation data to a 90/10 split
+##Split train and validation data to a 90/10 split
 train, validate = train_test_split(train, test_size=0.10, random_state=0)
 
 XTrain = train.drop('price', axis=1)
@@ -82,9 +82,9 @@ preprocessor = Pipeline([
 XTrainTransformed = preprocessor.fit_transform(XTrain)
 XValidTransformed = preprocessor.transform(XValidate)
 
-joblib.dump(preprocessor, 'preprocessor.pkl') """
+joblib.dump(preprocessor, 'preprocessor.pkl')
 
-""" print(XTrainTransformed)
+print(XTrainTransformed)
 print(XValidTransformed)
 
 model = RandomForestRegressor(n_estimators=320, random_state=0)
@@ -108,7 +108,7 @@ info_df['dtype'] = train.dtypes
 
 print(info_df)
 
-joblib.dump(model, 'vehicle_price_predictor_RandomForestRegressor.pkl') """
+joblib.dump(model, 'vehicle_price_predictor_RandomForestRegressor.pkl')
 
 
 
